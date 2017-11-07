@@ -26,7 +26,7 @@ import org.apache.commons.cli.ParseException;
 public class TemplateExpander {
 
     static final String USAGE = "TemplateExpander [{options}] {args}";
-    static final String HEADER = "For each {arg} file generates a corresponding .xsl file by expanding a template using data from the {arg} file.";
+    static final String HEADER = "Merges arg into template.";
     static final Options OPTIONS = new Options();
     static {
         OPTIONS.addOption("h","help",false,"show help");
@@ -36,12 +36,8 @@ public class TemplateExpander {
         OPTIONS.addOption("t","template",true,"path to the template file; defaults to 'template.xsl'");
     };
     static final String FOOTER = 
-            "Processes each {arg} file through the {template} to create {output-dir}/{arg}.xsl."
+            "Processes each {arg} file through the {template} to create {output-dir}/{arg}"
             + "\n\n"
-            + "{arg} files contain XML like:\n"
-            + "    <unexpanded-step step=\"{this-step}\" next-step=\"{mext-step}\">"
-            + "       {xsl element list}\n"
-            + "    </unexpanded-xsl>\n"
             ;
     
     /**

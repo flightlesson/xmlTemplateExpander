@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <properties>
-    <!-- build artifacts go in ${trunk}/maven-targets/${artifactId} -->
+    <!-- build artifacts go in ${trunk}/maven-build-artifacts/${artifactId} -->
     <trunk>..</trunk>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -36,9 +36,9 @@
   </dependencies>
 
   <build>
-    <!-- build artifacts go in ${trunk}/maven-targets/${artifactId} -->
-    <directory>${trunk}/maven-targets/${project.artifactId}</directory>
-    <outputDirectory>${trunk}/maven-targets/${project.artifactId}/classes</outputDirectory>
+    <!-- build artifacts go in ${trunk}/maven-build-artifacts/${artifactId} -->
+    <directory>${trunk}/maven-build-artifacts/${project.artifactId}</directory>
+    <outputDirectory>${trunk}/maven-build-artifacts/${project.artifactId}/classes</outputDirectory>
     <plugins>
       <plugin>
         <!-- include dependencies in one jar file -->
