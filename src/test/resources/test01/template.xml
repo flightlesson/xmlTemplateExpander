@@ -1,0 +1,10 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+  <xsl:output method="xml"/>
+  
+  <xsl:template mode="%this-mode%" match="/">
+    <xsl:message>This mode is %this-mode%,  %next-mode% comes next. And %not-found% wasn't set.</xsl:message>
+  </xsl:template>
+
+  %content%
+  
+</xsl:stylesheet>

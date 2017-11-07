@@ -1,0 +1,10 @@
+<template-params xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <template-param name="this-mode">abc</template-param>
+  <template-param name="next-mode">def</template-param>
+  <template-param name="content">
+    <xsl:template mode="abc" match="abc">
+      <xsl:value-of select="@name"/>
+      <xsl:message>Hi Mom!</xsl:message>
+    </xsl:template>
+  </template-param>
+</template-params>
