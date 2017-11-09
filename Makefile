@@ -1,22 +1,22 @@
 TRUNK=..
-TARGET=$(TRUNK)/maven-build-artifacts/xsl-template-expander
-SANDBOX=$(TRUNK)/xsl-template-expander-sandbox
+TARGET=$(TRUNK)/maven-build-artifacts/xml-template-expander
+SANDBOX=$(TRUNK)/xml-template-expander-sandbox
 
-all: $(TARGET)/xsl-template-expander-1.0-SNAPSHOT-jar-with-dependencies.jar
+all: $(TARGET)/xml-template-expander-1.0-SNAPSHOT-jar-with-dependencies.jar
 
-install: $(SANDBOX)/bin $(SANDBOX)/bin/template-expander $(SANDBOX)/bin/xsl-template-expander-1.0-SNAPSHOT-jar-with-dependencies.jar
+install: $(SANDBOX)/bin $(SANDBOX)/bin/xml-template-expander $(SANDBOX)/bin/xml-template-expander.jar
 
-$(TARGET)/xsl-template-expander-1.0-SNAPSHOT-jar-with-dependencies.jar: 
+$(TARGET)/xml-template-expander-1.0-SNAPSHOT-jar-with-dependencies.jar: 
 	mvn package
 
 $(SANDBOX)/bin:
 	mkdir -p $@
 
-$(SANDBOX)/bin/template-expander: template-expander
+$(SANDBOX)/bin/xml-template-expander: xml-template-expander
 	cp $< $@
 	chmod a+rx $@
 
-$(SANDBOX)/bin/xsl-template-expander-1.0-SNAPSHOT-jar-with-dependencies.jar: $(TARGET)/xsl-template-expander-1.0-SNAPSHOT-jar-with-dependencies.jar
+$(SANDBOX)/bin/xml-template-expander.jar: $(TARGET)/xml-template-expander-1.0-SNAPSHOT-jar-with-dependencies.jar
 	cp $< $@
 	chmod a+r $@
 

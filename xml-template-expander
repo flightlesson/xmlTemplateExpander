@@ -6,7 +6,7 @@ mydir=$(dirname $0 | sed 's|/$||')
 # TRUNK must either be empty or end with a slash.
 TRUNK=../
 # The jar file's name matches $jarfilebasename*.jar
-jarfilebasename=xsl-template-expander
+jarfilebasename=xml-template-expander
 # The application's main class
 mainclass=com.strongblackcoffee.xsltemplateexpander.TemplateExpander
 
